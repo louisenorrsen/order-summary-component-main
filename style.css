@@ -59,7 +59,7 @@ main {
     background-color: var(--very-pale-blue);
     border-radius: 11px;
     margin: 24px;
-    padding: 20px;
+    padding: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -138,6 +138,7 @@ main {
     .card--header {
         margin: 48px 48px 17px 48px;
         font-size: 28px;
+        line-height: 37px;
     }
 
     .card--text {
@@ -148,6 +149,18 @@ main {
     
     .sub-plan {
         margin: 20px 48px 32px 48px;
+    }
+
+    .plan--header {
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 21.17px;
+    }
+
+    .plan--cost {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 21.17px;
     }
 
     .plan--change a:hover {
