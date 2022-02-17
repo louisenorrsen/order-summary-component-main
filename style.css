@@ -1,6 +1,7 @@
 :root {
     --pale-blue: hsl(225, 100%, 94%);
     --bright-blue: hsl(245, 75%, 52%);
+    --pop: hsl(245, 83%, 68%);
 
     --very-pale-blue: hsl(225, 100%, 98%);
     --desaturated-blue: hsl(224, 23%, 55%);
@@ -9,10 +10,15 @@
     --font-family: 'Red Hat Display', sans-serif;
 }
 
+body {
+    box-sizing: border-box;
+}
+
 main {
     background-image: url(./images/pattern-background-mobile.svg);
     background-repeat: no-repeat;
     background-color: var(--pale-blue);
+    background-attachment: fixed;
     height: 100vh;
     display: grid;
     place-items: center;
@@ -36,6 +42,7 @@ main {
     font-family: var(--font-family);
     font-size: 22px;
     font-weight: 900;
+    margin-top: 32px;
 }
 
 .card--text {
@@ -44,12 +51,14 @@ main {
     font-size: 15px;
     font-family: var(--font-family);
     line-height: 25px;
+    margin-top: 1.5em;
+    margin: 16px 32px 24px 32px;
 }
 
 .sub-plan {
     background-color: var(--very-pale-blue);
     border-radius: 11px;
-    margin: 20px;
+    margin: 24px;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -82,14 +91,80 @@ main {
     font-weight: 700;
 }
 
+.payment-btn {
+    background-color: var(--bright-blue);
+    box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.12);
+    color: #fff;
+    border-radius: 11px;
+    padding: 1em 0;
+    font-family: var(--font-family);
+    font-weight: 900;
+    font-size: 15px;
+    margin: 24px;
+}
 
-
-
+.cancel-order-btn {
+    font-family: var(--font-family);
+    font-weight: 900;
+    font-size: 15px;
+    color: var(--desaturated-blue);
+}
 
 .attribution { 
-    font-size: 11px; 
+    font-size: 12px; 
     text-align: center; 
+    font-family: var(--font-family);
+    position: absolute;
+    bottom: 20px;
 }
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: var(--bright-blue); 
+}
+
+@media only screen and (min-width: 376px) {
+    main {
+        background-image: url(./images/pattern-background-desktop.svg);
+        background-position-y: -100px;
+    }
+
+    .card,
+    .hero img {
+        width: 450px;
+    }
+
+    .card {
+        height: 697px;
+    }
+
+    .card--header {
+        margin: 45px 48px 17px 48px;
+        font-size: 28px;
+    }
+
+    .card--text {
+        margin: 17px 48px 20px 48px;
+        font-size: 16px;
+        line-height: 26px;
+    }
+    
+    .sub-plan {
+        margin: 20px 48px 32px 48px;
+    }
+
+    .plan--change a:hover {
+        color: var(--pop);
+    }
+
+    .payment-btn {
+        margin: 32px 48px 32px 48px;
+        padding: 15px;
+    }
+
+    .payment-btn:hover {
+        background-color: #766cf1;
+    }
+
+    .cancel-order-btn:hover {
+        color: var(--dark-blue);
+    }
 }
